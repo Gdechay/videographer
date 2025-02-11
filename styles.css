@@ -447,8 +447,9 @@ h3::after {
     }
     
     .photo-item {
-        width: 250px;
-        height: 375px;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 3/4;
     }
     
     .design-type-selector {
@@ -472,39 +473,55 @@ h3::after {
         gap: 1.5rem;
     }
 
-    .portfolio-grid.vertical {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 0.5rem;
+    .portfolio-grid,
+    .portfolio-grid.vertical,
+    .design-grid.horizontal,
+    .design-grid.vertical,
+    .design-grid.business-cards,
+    .design-grid.albums {
+        width: 100%;
+        padding: 0 1rem;
+        margin: 0;
     }
 
-    .portfolio-info h4 {
-        font-size: 0.7rem;
-    }
-
-    .portfolio-info p {
-        font-size: 0.6rem;
-    }
-
-    .design-info h4 {
-        font-size: 1rem;
-    }
-
-    .design-info p {
-        font-size: 0.8rem;
-    }
-
-    .stats-counter {
+    .portfolio-grid {
+        grid-template-columns: 1fr;
         gap: 1rem;
+    }
+
+    .portfolio-item {
+        width: 100%;
+    }
+
+    .thumbnail {
+        width: 100%;
+    }
+
+    .photos-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1rem;
+        width: 100%;
+    }
+
+    .scroll-btn {
+        display: none;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .partners-grid {
+        width: 100%;
+        padding: 0 1rem;
+    }
+
+    .design-type-selector {
+        width: 100%;
+        padding: 0 1rem;
         flex-wrap: wrap;
-        justify-content: space-around;
-    }
-    
-    .counter {
-        font-size: 1.5rem;
-    }
-    
-    .counter-label {
-        font-size: 0.7rem;
+        justify-content: center;
     }
 }
 
@@ -528,8 +545,9 @@ h3::after {
     }
     
     .photo-item {
-        width: 200px;
-        height: 300px;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 3/4;
     }
     
     .portfolio-link {
@@ -572,6 +590,21 @@ h3::after {
 
     .counter-label {
         font-size: 0.6rem;
+    }
+
+    .portfolio-grid,
+    .portfolio-grid.vertical,
+    .design-grid.horizontal,
+    .design-grid.vertical,
+    .design-grid.business-cards,
+    .design-grid.albums,
+    .partners-grid {
+        padding: 0 0.5rem;
+    }
+
+    section {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
     }
 }
 
